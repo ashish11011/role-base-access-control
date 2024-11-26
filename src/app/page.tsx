@@ -6,6 +6,7 @@ import User from "@/models/users";
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { hasPermission } from "@/dictionaryPermission";
+import AshishFooter from "@/components/profileSection";
 
 export const revalidate = 0;
 
@@ -61,6 +62,8 @@ export default async function Home({ searchParams }: { searchParams: any }) {
           <p>No results found.</p>
         )}
       </div>
+      <div className=" mt-12"></div>
+      <AshishFooter />
     </div>
   );
 }
